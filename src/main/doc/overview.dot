@@ -1,0 +1,12 @@
+digraph overview {
+	"jms://topic/broadcast" -> "Ingest"
+	"Ingest" -> "Annotate Object"
+	"Annotate Object" -> "Post-Process"
+	"Post-Process" -> "Console Logger"
+	"Post-Process" -> "JMS Emitter"
+	"Post-Process" -> "JSON Emitter"
+	"Console Logger" -> "stream://stdout"
+	"JMS Emitter" -> "jms://topic/items"
+	"JSON Emitter" -> "Transform to JSON"
+	"Transform to JSON" -> "Send JSON to registered clients"
+}
