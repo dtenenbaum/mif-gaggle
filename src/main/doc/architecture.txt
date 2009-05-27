@@ -1,0 +1,7 @@
+The broadcast topic will take messages that come in and send them out to all
+connected clients.  
+
+The admin topic will handle administrative functionality, including registering
+new clients.  When a new client connects, it will be registered in the
+singleton Client Registry class.  This way anything in the Boss VM will be able
+to get access to connected clients.  
