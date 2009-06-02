@@ -6,7 +6,7 @@ import gov.pnnl.mif.api.types.MifProcessor;
 
 public class Handler implements MifProcessor {
 	public Serializable listen(Serializable input) {
-		return null;
+		return input;
 	}
 
 	public String getInputType() {
