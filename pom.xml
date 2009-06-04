@@ -36,6 +36,19 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptors>
+						<descriptor>src/main/assembly/jar-with-deps.xml</descriptor>
+					</descriptors>
+					<archive>
+						<manifest>
+							<mainClass>org.systemsbiology.gaggle.GaggleDriver</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 </project>
