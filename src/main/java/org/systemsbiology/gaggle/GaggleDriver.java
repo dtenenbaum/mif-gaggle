@@ -23,7 +23,8 @@ public class GaggleDriver {
 
     MifPipeline pipeline = new MifPipeline();
     //pipeline.addMifJmsConnector("tcp://localhost:61616", JmsProvider.ACTIVEMQ);
-    pipeline.addMifJmsConnector("vm://broker1?marshal=false&broker.persistent=false", JmsProvider.ACTIVEMQ);
+    //pipeline.addMifJmsConnector("vm://broker1?marshal=false&broker.persistent=false", JmsProvider.ACTIVEMQ);
+    pipeline.addMifJmsConnector("vm://gaggleBroker?marshal=false&broker.persistent=false", JmsProvider.ACTIVEMQ);
 
     // Admin pipeline
     pipeline.addMifModule(org.systemsbiology.gaggle.admin.JmsIngest.class.getName(), "jms://topic:adminSend", "vm://adminHandler");
@@ -35,7 +36,7 @@ public class GaggleDriver {
     pipeline.addMifModule(org.systemsbiology.gaggle.boss.Handler.class.getName(), "vm://ingest", "vm://annotate");
     pipeline.addMifModule(org.systemsbiology.gaggle.boss.Annotator.class.getName(), "vm://annotate", "vm://postProcess");
     pipeline.addMifModule(org.systemsbiology.gaggle.boss.PostProcessor.class.getName(), "vm://postProcess", "vm://emitJMS");
-    pipeline.addMifModule(org.systemsbiology.gaggle.boss.JmsEmitter.class.getName(), "vm://emitJMS", "jms://topic:items");
+    pipeline.addMifModule(org.systemsbiology.gaggle.boss.JmsEmitter.class.getName(), "vm://emitJMS", "jms://topic:gaggle");
 
     pipeline.start();
   }

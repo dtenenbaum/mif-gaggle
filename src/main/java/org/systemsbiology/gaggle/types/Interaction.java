@@ -19,7 +19,7 @@
  * GaggleData object Network.
  * @see Network
  */
-package org.systemsbiology.gaggle.core.datatypes;
+package org.systemsbiology.gaggle.types;
 //----------------------------------------------------------------------------------------
 
 import java.io.*;

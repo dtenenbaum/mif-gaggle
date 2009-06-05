@@ -1,7 +1,8 @@
 package org.systemsbiology.gaggle.admin;
 import java.util.UUID;
+import java.io.Serializable;
 
-public class GaggleClient {
+public class GaggleClient implements Serializable {
   // Effectively immutable "friendly" name
   private String name;
   public String getName() {

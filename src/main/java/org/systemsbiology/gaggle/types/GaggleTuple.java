@@ -1,4 +1,4 @@
-package org.systemsbiology.gaggle.core.datatypes;
+package org.systemsbiology.gaggle.types;
 
 /*
 * Copyright (C) 2007 by Institute for Systems Biology,

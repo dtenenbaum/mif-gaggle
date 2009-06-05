@@ -4,4 +4,4 @@
  * to be transmitted over RMI.
  */
 
-package org.systemsbiology.gaggle.core.datatypes;
+package org.systemsbiology.gaggle.types;

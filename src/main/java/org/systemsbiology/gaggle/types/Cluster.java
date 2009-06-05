@@ -1,4 +1,4 @@
-package org.systemsbiology.gaggle.core.datatypes;
+package org.systemsbiology.gaggle.types;
 
 /**
  * An object encapsulating the notion "these items (genes, proteins, etc.) are interesting in these conditions".

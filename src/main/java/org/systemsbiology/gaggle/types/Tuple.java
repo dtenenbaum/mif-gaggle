@@ -1,4 +1,4 @@
-package org.systemsbiology.gaggle.core.datatypes;
+package org.systemsbiology.gaggle.types;
 
 import java.util.List;
 import java.util.ArrayList;

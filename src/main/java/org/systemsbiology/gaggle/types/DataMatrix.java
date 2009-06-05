@@ -13,7 +13,7 @@
  *   http://www.gnu.org/copyleft/lesser.html
  */
 
-package org.systemsbiology.gaggle.core.datatypes;
+package org.systemsbiology.gaggle.types;
 
 import java.util.*;
 import java.io.*;
