@@ -1,6 +1,7 @@
 package org.systemsbiology.gaggle.admin;
 
 import java.io.Serializable;
+import java.util.Map;
 import java.util.HashMap;
 import gov.pnnl.mif.api.types.MifProcessor;
 
