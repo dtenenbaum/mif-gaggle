@@ -3,7 +3,9 @@ import java.util.UUID;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.io.Serializable;
+import org.systemsbiology.gaggle.types.GaggleData;
 import org.systemsbiology.gaggle.types.DataMatrix;
+import org.systemsbiology.gaggle.boss.GaggleMessage;
 
 public class ClientDriver {
   private Producer adminProducer;
@@ -22,7 +24,7 @@ public class ClientDriver {
     gaggleProducer.connect();
     gaggleConsumer = new Consumer("gaggle");
 
-    createConsumerConsoleLoggingThread();
+    createConsumerConsoleLoggingThreads();
   }
 
   public void run() {
@@ -32,7 +34,7 @@ public class ClientDriver {
     sendGaggleTestMessage();
   }
 
-  private void createConsumerConsoleLoggingThread() {
+  private void createConsumerConsoleLoggingThreads() {
     // Don't you  just love this thread-starting syntax? Ugh...
     new Thread(new Runnable() {
       public void run() { gaggleConsumer.run(); }
@@ -68,13 +70,9 @@ public class ClientDriver {
   }
 
   private void sendGaggleTestMessage() {
-    HashMap<String,Serializable> msg = new HashMap<String,Serializable>();
-    LinkedList<String> recipients = new LinkedList<String>();
-    msg.put("to", recipients);
-    msg.put("body", new DataMatrix());
-    try {
-    gaggleProducer.send(msg);
-    }
+    GaggleData body = new DataMatrix();
+    GaggleMessage m = new GaggleMessage(body);
+    try { gaggleProducer.send(body); }
     catch (Exception e) {
       System.err.println("Error sending test gaggle message...");
       e.printStackTrace();

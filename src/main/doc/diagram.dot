@@ -1,0 +1,10 @@
+digraph foo {
+  "jms://topic:adminSend"-> "vm://adminHandler";
+  "vm://adminHandler"-> "vm://adminJmsOut";
+  "vm://adminJmsOut"-> "jms://topic:admin";
+  "jms://topic:send"-> "vm://ingest";
+  "vm://ingest"-> "vm://annotate";
+  "vm://annotate"-> "vm://postProcess";
+  "vm://postProcess"-> "vm://emitJMS";
+  "vm://emitJMS"-> "jms://topic:gaggle";
+}

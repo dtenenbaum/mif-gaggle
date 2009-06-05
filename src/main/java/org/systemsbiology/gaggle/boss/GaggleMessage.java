@@ -1,11 +1,11 @@
 package org.systemsbiology.gaggle.boss;
 
-import java.io.Serializable; 
+import org.systemsbiology.gaggle.types.GaggleData;
 import java.util.List; 
 import java.util.LinkedList; 
 
 public class GaggleMessage {
-  private Serializable payload;
+  private GaggleData payload;
   private List<String> recipients;
 
   public List<String> getRecipients() {
@@ -24,14 +24,14 @@ public class GaggleMessage {
     this.recipients = recipients;
   }
 
-  public Serializable getPayload() {
+  public GaggleData getPayload() {
     return payload;
   }
-  public void setPayload(Serializable p) {
+  public void setPayload(GaggleData p) {
     payload = p;
   }
 
-  public GaggleMessage(Serializable payload) {
+  public GaggleMessage(GaggleData payload) {
     this(payload, new LinkedList<String>());
   }
 
@@ -39,7 +39,7 @@ public class GaggleMessage {
     this(null, recipients);
   }
 
-  public GaggleMessage(Serializable payload, LinkedList<String> recipients) {
+  public GaggleMessage(GaggleData payload, LinkedList<String> recipients) {
     this.payload = payload;
     this.recipients = recipients;
   }

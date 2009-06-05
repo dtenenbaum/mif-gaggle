@@ -22,8 +22,6 @@ public class GaggleDriver {
     }
 
     MifPipeline pipeline = new MifPipeline();
-    //pipeline.addMifJmsConnector("tcp://localhost:61616", JmsProvider.ACTIVEMQ);
-    //pipeline.addMifJmsConnector("vm://broker1?marshal=false&broker.persistent=false", JmsProvider.ACTIVEMQ);
     pipeline.addMifJmsConnector("vm://gaggleBroker?marshal=false&broker.persistent=false", JmsProvider.ACTIVEMQ);
 
     // Admin pipeline
