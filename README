@@ -1,2 +1,9 @@
 This is the README for MIF-Gaggle.
 More to come.
+
+You should just have to run mvn clean compile to build it. 
+To build a self-contained jar file you would run mvn clean assembly:assembly.
+The jar file in target/mif-gaggle/target/gaggle-1.0-SNAPSHOT-jar-with-dependencies.jar 
+should be an all-inclusive jar to run the system from.
+
+
