@@ -1,7 +1,7 @@
 package org.systemsbiology.gaggle;
-import gov.pnnl.mif.api.exception.MifException;
-import gov.pnnl.mif.api.MifPipeline;
-import gov.pnnl.mif.api.MifJmsConnector.JmsProvider;
+import gov.pnnl.mif.MifException;
+import gov.pnnl.mif.MifPipeline;
+import gov.pnnl.mif.core.JmsProvider;
 import org.apache.log4j.Logger;
 import org.apache.activemq.broker.BrokerService;
 

@@ -2,7 +2,7 @@ package org.systemsbiology.gaggle.boss;
 
 import java.io.Serializable;
 import java.util.HashMap;
-import gov.pnnl.mif.api.types.MifProcessor;
+import gov.pnnl.mif.user.MifProcessor;
 
 public class Annotator implements MifProcessor {
 	public Serializable listen(Serializable input) {

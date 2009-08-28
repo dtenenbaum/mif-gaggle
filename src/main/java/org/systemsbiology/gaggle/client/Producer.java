@@ -1,6 +1,6 @@
 package org.systemsbiology.gaggle.client;
 
-import gov.pnnl.mif.api.exception.MifException;
+import gov.pnnl.mif.MifException;
 
 import java.io.Serializable;
 
