@@ -14,6 +14,7 @@ public class GaggleDriver {
     try {
       BrokerService broker = new BrokerService();
       broker.addConnector("tcp://localhost:61616");
+      broker.addConnector("stomp://localhost:61613");
       broker.setBrokerName("gaggleBroker");
       broker.start();
     }
